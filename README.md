@@ -24,6 +24,7 @@ that says connect to application.
 7: Back in your project folder, create a new file named .env in the main directory.
 
 8: Within the .env folder, create 3 variables:
+
 	NODE_ENV = development
 
 	PORT = 5000 (this can be whatever you want)
