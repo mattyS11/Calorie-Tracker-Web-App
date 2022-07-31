@@ -1,0 +1,45 @@
+.main {
+  background-color: black;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  z-index: 0;
+  flex-direction: column;
+}
+
+.main h1 {
+  color: white;
+  justify-content: center;
+  position: absolute;
+  top: 0%;
+  z-index: 2;
+  margin: auto;
+}
+
+.main h2 {
+  color: rgb(255, 255, 255);
+  justify-content: center;
+  position: absolute;
+  top: 60%;
+  z-index: 2;
+  margin: auto;
+}
+
+.main > .calorieButton {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  position: absolute;
+  top: 40%;
+  left: 39%;
+  z-index: 2;
+  align-items: center;
+  justify-content: center;
+  border: solid 4px aqua;
+  margin-bottom: 10px;
+  border-color: rgb(168, 255, 255);
+}
+
+.calorieButton:hover {
+  background-color: aqua;
+}

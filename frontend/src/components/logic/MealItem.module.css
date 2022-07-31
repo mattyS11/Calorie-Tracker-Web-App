@@ -1,0 +1,45 @@
+.list {
+  list-style-type: none;
+}
+.item h3 {
+  font-weight: bold;
+}
+
+.calories {
+  color: rgb(0, 0, 0);
+  font-weight: bolder;
+  font-size: larger;
+}
+
+.item {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  text-align: center;
+  margin: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.mealButton {
+  position: relative;
+  top: 25%;
+  font: inherit;
+  cursor: pointer;
+  background-color: rgb(255, 0, 0);
+  border: 1px solid rgb(0, 0, 0);
+  color: white;
+  padding: 0px;
+  border-radius: 20px;
+  font-weight: bold;
+  height: 50px;
+  width: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+button:hover,
+button:active {
+  background-color: #70c6e0;
+  border-color: #70c6e0;
+}

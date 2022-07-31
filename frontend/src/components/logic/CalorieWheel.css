@@ -1,0 +1,41 @@
+.container {
+  z-index: 1;
+  border-radius: 8px;
+  display: flex;
+  background: rgb(0, 0, 0);
+  height: 420px;
+  width: 420px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.progress {
+  color: black;
+  position: relative;
+  height: 250px;
+  width: 250px;
+  background: conic-gradient(aqua 3.6deg, #ededed 0deg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: ease-in 5s;
+}
+
+.progress::before {
+  content: "";
+  position: absolute;
+  height: 210px;
+  width: 210px;
+  border-radius: 50%;
+  background-color: rgb(0, 0, 0);
+}
+
+.value {
+  position: relative;
+  color: white;
+}
+.text {
+  color: black;
+}
