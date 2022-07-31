@@ -16,9 +16,13 @@ function App() {
   const [calorieTarget, setCalorieTarget] = useState(
     localStorage.getItem("target")
   );
+
+  const [firstLoad, setFirstLoad] = useState(localStorage.getItem("firstLoad"));
+
   const [showTarget, setShowTarget] = useState(false);
 
   const [success, setSuccess] = useState(false);
+
   function showSuccess() {
     setSuccess(true);
   }
@@ -54,6 +58,57 @@ function App() {
   function hideTargetHandler() {
     setShowTarget(false);
   }
+
+  // If running for the first time, post some unit types to the database.
+  async function setUnits() {
+    const flag = localStorage.getItem("firstLoad");
+    if (!flag) {
+      console.log("hello");
+      localStorage.setItem("firstLoad", true);
+      const gram_unit = {
+        unitType: "per 100g",
+        denom: 100,
+        symbol: "g",
+      };
+      const single_unit = {
+        unitType: "Each",
+        denom: 1,
+        symbol: "single",
+      };
+
+      const ml_unit = {
+        unitType: "per 100mL",
+        denom: 100,
+        symbol: "mL",
+      };
+      const response = await fetch("http://localhost:5000/api/units", {
+        method: "POST",
+        body: JSON.stringify(gram_unit),
+        headers: {
+          "Content-Type": "application/JSON",
+        },
+      });
+      const response2 = await fetch("http://localhost:5000/api/units", {
+        method: "POST",
+        body: JSON.stringify(single_unit),
+        headers: {
+          "Content-Type": "application/JSON",
+        },
+      });
+      const response3 = await fetch("http://localhost:5000/api/units", {
+        method: "POST",
+        body: JSON.stringify(ml_unit),
+        headers: {
+          "Content-Type": "application/JSON",
+        },
+      });
+      const data = await response.json();
+      const data2 = await response2.json();
+      const data3 = await response3.json();
+      console.log(data, data2, data3);
+    }
+  }
+  setUnits();
   return (
     <div className={classes.main}>
       <h1>Calorie Tracker</h1>
