@@ -16,7 +16,12 @@ function SetTarget(props) {
   return (
     <Modal>
       <form onSubmit={formSubmissionHandler}>
-        <label>Set a Calorie Target</label>
+        <span>
+          <label>Set a Calorie Target</label>
+          <button className={"close"} onClick={props.onClose}>
+            X
+          </button>
+        </span>
         <input type="number" onChange={targetChangeHandler}></input>
         <button>Set Target</button>
       </form>
