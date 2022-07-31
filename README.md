@@ -27,14 +27,14 @@ that says connect to application.
 
 	NODE_ENV = development
 
-	PORT = 5000 (this can be whatever you want)
+	PORT = 5000 
 
-	MONGO_URI = (the copied connection string)
+	MONGO_URI = (the copied connection string from mongoDB)
 
 
 9: Modify the MONGO_URI variable so that: 
 	Instead of <password>, it is your MongoDB password (special chars must be URL encoded)
-	Place your database name within the string like so: .mongodb.net/<database name>?retryWrites=true&w=majority.
+	Your database name is placed within the string like so: .mongodb.net/<database name>?retryWrites=true&w=majority.
 	
 	The string should look something like this: 
 	MONGO_URI = mongodb+srv://Matt_Sardinha:MyTestPassword@cluster0.r660b.mongodb.net/My_Database_name?retryWrites=true&w=majority
