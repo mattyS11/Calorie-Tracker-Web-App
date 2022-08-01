@@ -121,8 +121,8 @@ const AddMeal = (props) => {
           </div>
           <div className={amountInputClasses}>
             <label htmlFor="mealAmount">
-              Approximately how much did you eat of this meal? e.g half of the
-              meal = 1/2 = 0.5)
+              What percent of the meal did you eat? Enter as a decimal between
+              0.01 & 1. (Half of the meal would be 0.5)
             </label>
             <input type="number" step="0.01" onChange={amountChangeHandler} />
           </div>

@@ -29,22 +29,6 @@
   margin-left: 1rem;
 }
 
-.actions button:hover,
-.actions button:active {
-  background-color: #5a1a01;
-  border-color: #5a1a01;
-  color: white;
-}
-
-.actions .button--alt {
-  color: #8a2b06;
-}
-
-.actions .button {
-  background-color: #8a2b06;
-  color: white;
-}
-
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap");
 
 * {
@@ -154,10 +138,6 @@ button:disabled:active {
 .invalid input:focus {
   border-color: #ff8800;
   background-color: #fbe8d2;
-}
-
-.error-text {
-  color: #b40e0e;
 }
 
 .close {
